@@ -15,13 +15,16 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" class="logo">
-                <ul>
+                <ul id="side">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    
+                    <li><a href="#">About Us</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portifolio</a></li>
                     <li><a href="#">contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu();"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu();"></i>
             </nav>
             <div class="header-text">
                 <p>UI/Ux Designer</p>
@@ -40,7 +43,7 @@
                 <div class="about-col-2">
                    <h1 class="sub-title">About Me</h1> 
                    
-                   
+                   <div class="motive">
                    I'm a passionate Full Stack Developer with experience in building
                    responsive and dynamic websites. With a background in computer
                    science, I have developed skills in
@@ -54,7 +57,7 @@
                    learning new technologies to stay ahead
                    in the ever-evolving tech world.
 
-                   
+                </div> </div>
                 
                        <div class="tab-titles"> 
                         <p class="tab-links active-link" onclick="openTab('skills');">Skills</p>
@@ -165,9 +168,9 @@
       <!-- ----------------------- -->
        <div id="contact">
         <div class="container">
-            <div class="row">
+            <div class="row ">
                 <div class="My-contact">
-                <h2>Contact me</h2>
+                <h2>Contact Me</h2>
                 <p><i class="fa-solid fa-paper-plane" style="color: #ff004f;
                     margin-right: 15px;
                     font-size: 20px;"></i> jeromeboitenge@gmail.com</p>
@@ -199,6 +202,10 @@
                 </div>
             </div>
         </div>
+        <div>
+            <p class="copyright">&copy; 2024 Jerome Boitenge <i class="fa-solid fa-heart" style="color: #ff004f;"></i> we are here for you</p>
+        </div>
+       
        </div>
     <script>
         var tabLinks=document.getElementsByClassName('tab-links');
@@ -214,7 +221,17 @@ for( tabContent of tabContents){
 }
 event.currentTarget.classList.add('active-link');
 document.getElementById(tabName).classList.add('active-tab');
+let side=document.getElementById('side');
+    function openMenu(){
+        side.style.right="0";
+    }
+    function closeMenu(){
+        side.style.right="-2000px";
+    }
         }
     </script>
+  
+    
+    
 </body>
 </html>

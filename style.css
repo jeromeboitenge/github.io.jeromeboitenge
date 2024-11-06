@@ -284,7 +284,7 @@ nav ul li a:hover::after {
     border-radius: 10px;
     text-decoration: none;
     font-size: 15px;
-    color: fff;
+    color: white;
     transition:  background 0.6s;
 
 } 
@@ -347,4 +347,82 @@ form .btnn{
     margin-top: 20px;
     cursor: pointer; 
 }
+.copyright{
+width: 100%;
+text-align: center;
+padding: 20px 0;
+background: #262626;
+font-weight: 300;
+margin-top: 20px;
+}
+nav .fa-xmark, nav .fa-bars {
+    display: none;
+   
+}
+
+
+
+/* css media queries */
+ @media only screen and (max-width:600px){
+   .header-text{
+    
+    font-size: 30px;
+    
+    
+   } 
+   .header-text h1{
+    font-size: 40px;
+   
+   }
+  
+   /* .about-col-2 motive{
+    width: 100%;
+    display: block;
+    flex-wrap: wrap;
+
+
+    
+    font-size: 30px;
+    
+ } */
+ #header{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+ }
+ #about{
+    padding-top: 10px;
+    margin-top: 10px;
+ }
+.row img{
+    min-width: 300px;
+}
+nav .fa-xmark, nav .fa-bars {
+    display: block;
+    font-size: 25px;
+}
+nav ul {
+    position: fixed;
+    background: #ff004f;
+    top: 0;
+    right:-2000px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+
+}
+nav ul{
+    display: block;
+    margin: 25px;
+
+}
+nav .fa-xmark{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+}
+}
+
+    
+ 
     
