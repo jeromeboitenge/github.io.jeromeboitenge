@@ -4,6 +4,9 @@
     font-family: 'popins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     background: #080808;
@@ -371,20 +374,17 @@ nav .fa-xmark, nav .fa-bars {
     
    } 
    .header-text h1{
-    font-size: 40px;
+    font-size: 30px;
    
    }
   
-   /* .about-col-2 motive{
-    width: 100%;
-    display: block;
-    flex-wrap: wrap;
-
-
-    
-    font-size: 30px;
-    
- } */
+   .about-col-1, .about-col-2 motive{
+   flex-basis: 100%;
+ }
+ .about-col-1{ 
+    margin-bottom: 32px;
+ }
+ 
  #header{
     padding-bottom: 10px;
     margin-bottom: 10px;
@@ -393,9 +393,7 @@ nav .fa-xmark, nav .fa-bars {
     padding-top: 10px;
     margin-top: 10px;
  }
-.row img{
-    min-width: 300px;
-}
+ 
 nav .fa-xmark, nav .fa-bars {
     display: block;
     font-size: 25px;
@@ -404,13 +402,15 @@ nav ul {
     position: fixed;
     background: #ff004f;
     top: 0;
-    right:-2000px;
+    right:-200px;
     width: 200px;
     height: 100vh;
     padding-top: 50px;
+    z-index: 2;
+    transition: right 0.6s;
 
 }
-nav ul{
+nav ul li{
     display: block;
     margin: 25px;
 
@@ -420,6 +420,24 @@ nav .fa-xmark{
     top: 25px;
     left: 25px;
     cursor: pointer;
+}
+nav .fa-bars {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+#header{
+    height: 70vh;
+}
+.sub-title{
+    font-size: 35px;
+}
+.tab-links{
+    font-size: 17px;
+    margin-right: 21px;
+}
+.My-contact, .contact-right{
+    flex-basis: 100%;
 }
 }
 
