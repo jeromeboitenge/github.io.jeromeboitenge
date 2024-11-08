@@ -17,6 +17,7 @@
     <div id="header">
         <div class="container">
             <nav>
+                
                 <img src="images/logo.png" class="logo">
                 <ul id="side">
                     <li><a href="#header">Home</a></li>
@@ -83,11 +84,13 @@
 
                 <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>ui/ux</span><br>App interfaces</li>
-                        <li><span>Web Development</span><br> Web app development</li>
-                        <li><span>App Development</span><br>Android apps</li>
-                        <li><span>computer maintenance</span><br>mantaining and repairing computer both hardware and
-                            software</li>
+                        <li><span>2024</span><br>AI carreer essentials at ALX Rwanda</li>
+                        <li><span>2022</span><br> software development at University Of Rwanda</li>
+                        <li><span>2021-2022</span><br>Business Administration and customer care services</li>
+                        <li><span>2019-2020</span><br>mantaining and repairing computer and smart phones both 
+                            hardware and
+                            software
+                        </li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
@@ -111,17 +114,19 @@
                 <div>
                     <i class="fa-solid fa-code" style="font-size: 50px; margin-bottom: 30px;"></i>
                     <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, illum omnis veritatis ut
-                        assumenda qui sit voluptatem commodi vitae inventore,
-                        praesentium, fugit maxime quos unde modi in repudiandae et aliquid.</p>
+                    <p>Web development allows you to bring your ideas to life on the internet. With the right
+                         skills, you can create websites that are not only beautiful but also functional and 
+                         user-friendly. It’s a world where creativity meets technology to solve real problems.
+                          By building websites, you can connect with people and make an impact globally</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-pen-to-square " style="font-size: 50px; margin-bottom: 30px;"></i>
                     <h2>UI/Ux Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, illum omnis veritatis ut
-                        assumenda qui sit voluptatem commodi vitae inventore,
-                        praesentium, fugit maxime quos unde modi in repudiandae et aliquid.</p>
+                    <p>UI/UX Design is all about making digital experiences easy and enjoyable. It focuses 
+                        on creating beautiful, intuitive interfaces that users love to interact with. Great 
+                        design helps people navigate websites and apps with ease, making them feel comfortable and engaged.
+                         With UI/UX design, you turn ideas into seamless, user-friendly experiences that leave a lasting impression.</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
@@ -129,9 +134,10 @@
                     <h2>
                         App Design
                     </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, illum omnis veritatis ut
-                        assumenda qui sit voluptatem commodi vitae inventore,
-                        praesentium, fugit maxime quos unde modi in repudiandae et aliquid.</p>
+                    <p>UI/UX Design is all about making digital experiences easy and enjoyable. It focuses on creating beautiful, intuitive
+                         interfaces that users love to interact with. Great design helps people navigate websites and apps with ease, making 
+                         them feel comfortable and engaged. With UI/UX design, you turn ideas into seamless, user-friendly experiences that leave a
+                          lasting impression..</p>
                     <a href="#">Learn more</a>
                 </div>
             </div>
@@ -265,34 +271,32 @@
             const mainContent = document.getElementById("mainContent");
     
             if (result === "Data received") {
-                messageElement.style.display = "block";
+                messageElement.style.display = "flex";
+                messageElement.style.flexWrap="wrap";
                 messageElement.style.color = "red";
-                messageElement.style.border="2px solid white";
-                messageElement.style.fontSize="60px"
+                messageElement.style.fontSize="50px"
                 messageElement.style.fontWeight="bold";
                 messageElement.style.width="50%";
-                messageElement.style.borderRadius="10px"
                 messageElement.textContent = "Data submitted successfully!";
                 document.getElementById("contactForm").reset();
             } else {
-                messageElement.style.display = "block";
+                messageElement.style.display = "flex";
+                messageElement.style.flexWrap="wrap";
                 messageElement.style.color = "red";
-                messageElement.style.border="2px solid white";
-                messageElement.style.fontSize="60px"
+                messageElement.style.fontSize="50px"
                 messageElement.style.fontWeight="bold";
                 messageElement.style.width="50%";
-                messageElement.style.borderRadius="10px"
                 messageElement.textContent = "Submission failed. Please try again.";
             }
     
-            // Hide main content while showing the message
+        
             mainContent.style.display = "none";
     
-            // Set timeout to hide the message after 10 seconds and show main content again
+            
             setTimeout(() => {
                 messageElement.style.display = "none";
                 mainContent.style.display = "block";
-            }, 10000); // 10000 milliseconds = 10 seconds
+            }, 10000);
     
         } catch (error) {
             console.error("Error:", error);
@@ -302,7 +306,7 @@
             messageElement.textContent = "An error occurred. Please try again.";
             document.getElementById("mainContent").style.display = "none";
     
-            // Set timeout to hide the error message after 10 seconds and show main content again
+            
             setTimeout(() => {
                 messageElement.style.display = "none";
                 mainContent.style.display = "block";
