@@ -357,6 +357,8 @@ form .btnn{
 #submissionMessage{
     display:none; 
     color:red;
+    transition: display 0.6s;
+    
 
 }
 .copyright{
