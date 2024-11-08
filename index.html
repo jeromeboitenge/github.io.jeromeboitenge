@@ -212,7 +212,7 @@
                     <a href="/documents/resume.pdf" download  class="btn btnn"> My cv</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form id="contactForm">
                         <input type="text" name="Name" placeholder="Your name" required>
                         <input type="email" name="Email" placeholder="Your email" required>
                         <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
@@ -227,6 +227,32 @@
         </div>
 
     </div>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Collect form data
+            const formData = new FormData(event.target);
+            const data = new URLSearchParams(formData);
+
+            // Replace 'YOUR_WEB_APP_URL' with your actual Google Apps Script URL
+            fetch("https://script.google.com/macros/s/AKfycbzyoIxzicz-Ksb5xiuqdf0oXR0WO586S5jxnfK28GZ35s-8JtD_z9Tz0GQ_Lvf9QOu_/exec", {
+                method: "POST",
+                body: data
+            })
+            .then(response => response.text())
+            .then(result => {
+                console.log(result); // Log the response
+                alert("Data submitted successfully!"); // Success message
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("There was an error submitting your data."); // Error message
+            });
+        });
+    </script>
     <script>
         var tabLinks = document.getElementsByClassName('tab-links');
         var tabContents = document.getElementsByClassName('tab-contents');
@@ -254,6 +280,7 @@
         side.style.right = "-200px";
     }
 </script>
+
   
 </body>
 
