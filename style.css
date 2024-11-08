@@ -354,6 +354,11 @@ form .btnn{
     margin-top: 20px;
     cursor: pointer; 
 }
+#submissionMessage{
+    display:none; 
+    color:red;
+
+}
 .copyright{
 width: 100%;
 text-align: center;
