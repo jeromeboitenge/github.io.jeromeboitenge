@@ -19,13 +19,13 @@
             <nav>
                 <img src="images/logo.png" class="logo">
                 <ul id="side">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#header">Home</a></li>
 
-                    <li><a href="#">About 
+                    <li><a href="#about">About 
                     </a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portifolio</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#my-hobby">Hobies </a></li>
+                    <li><a href="#contact">contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closeMenu();"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openMenu();"></i>
@@ -137,7 +137,7 @@
     </div>
     </div>
     <!-- ---------------------------------------- -->
-    <div class="my-hobby">
+    <div id="my-hobby">
         <div class="container">
             <div class="sub-title">
                 <h1>My Hobies</h1>
@@ -242,6 +242,7 @@
         }
     </script>
     <script>
+
     
     var side = document.getElementById("side");
     function openMenu() {
@@ -251,8 +252,7 @@
         side.style.right = "-200px";
     }
 </script>
-
-
+  
 </body>
 
 </html>
